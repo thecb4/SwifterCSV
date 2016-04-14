@@ -15,11 +15,17 @@ extension CSV {
         
         var state = State.Start
         let doLimit = limitTo != nil
-        let accumulate = Accumulator(block: block, startAt: startAt)
+        let accumulate = Accumulator(block: block, delimiter: delimiter, startAt: startAt)
         
         while currentIndex < endIndex {
-            state = state.nextState(accumulate, char: text[currentIndex])
             if doLimit && accumulate.count >= limitTo! {
+                break
+            }
+            state = state.nextState(accumulate, char: text[currentIndex])
+            switch state {
+            case .Error(let msg):
+                fatalError(msg)
+            default:
                 break
             }
             currentIndex = currentIndex.successor()
@@ -37,12 +43,14 @@ class Accumulator {
     let block: ([String]) -> ()
     var count = 0
     let startAt: Int
+    let delimiter: Character
     
-    init(block: ([String]) -> (), startAt: Int = 0) {
+    init(block: ([String]) -> (), delimiter: Character, startAt: Int = 0) {
         self.block = block
+        self.startAt = startAt
+        self.delimiter = delimiter
         field = []
         fields = []
-        self.startAt = startAt
     }
     
     func pushCharacter(char: Character) {
@@ -93,7 +101,7 @@ enum State {
 private func stateFromStart(hook: Accumulator, _ char: Character) -> State {
     if char == "\"" {
         return .ParsingQuotes
-    } else if char == "," {//self.delimiter {
+    } else if char == hook.delimiter {
         hook.pushField()
         return .Start
     } else if isNewline(char) {
@@ -108,7 +116,7 @@ private func stateFromStart(hook: Accumulator, _ char: Character) -> State {
 private func stateFromParsingField(hook: Accumulator, _ char: Character) -> State {
     if char == "\"" {
         return .ParsingFieldInnerQuotes
-    } else if char == "," {//self.delimiter {
+    } else if char == hook.delimiter {
         hook.pushField()
         return .Start
     } else if isNewline(char) {
@@ -142,7 +150,7 @@ private func stateFromParsingQuotesInner(hook: Accumulator, _ char: Character) -
     if char == "\"" {
         hook.pushCharacter(char)
         return .ParsingQuotes
-    } else if char == "," {// self.delimiter {
+    } else if char == hook.delimiter {
         hook.pushField()
         return .Start
     } else if isNewline(char) {
@@ -154,7 +162,7 @@ private func stateFromParsingQuotesInner(hook: Accumulator, _ char: Character) -
 }
 
 private func isNewline(char: Character) -> Bool {
-    return char == "\n" || char == "\r\n"
+    return char == "\n" || char == "\r" || char == "\r\n"
 }
 
 
