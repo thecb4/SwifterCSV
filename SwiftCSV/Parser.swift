@@ -13,115 +13,155 @@ extension CSV {
         var currentIndex = text.startIndex
         let endIndex = text.endIndex
         
-        var atStart = true
-        var parsingField = false
-        var parsingQuotes = false
-        var innerQuotes = false
-        
-        var fields = [String]()
-        var field = [Character]()
-        
-        var count = 0
+        var state = State.Start
         let doLimit = limitTo != nil
-        
-        let callBlock: () -> () = {
-            fields.append(String(field))
-            if count >= startAt {
-                block(fields)
-            }
-            count += 1
-            fields = [String]()
-            field = [Character]()
-        }
-        
-        let changeState: (Character) -> (Bool) = { char in
-            if atStart {
-                if char == "\"" {
-                    atStart = false
-                    parsingQuotes = true
-                } else if char == self.delimiter {
-                    fields.append(String(field))
-                    field = [Character]()
-                } else if CSV.isNewline(char) {
-                    callBlock()
-                } else {
-                    parsingField = true
-                    atStart = false
-                    field.append(char)
-                }
-            } else if parsingField {
-                if innerQuotes {
-                    if char == "\"" {
-                        field.append(char)
-                        innerQuotes = false
-                    } else {
-                        fatalError("Can't have non-quote here: \(char)")
-                    }
-                } else {
-                    if char == "\"" {
-                        innerQuotes = true
-                    } else if char == self.delimiter {
-                        atStart = true
-                        parsingField = false
-                        innerQuotes = false
-                        fields.append(String(field))
-                        field = [Character]()
-                    } else if CSV.isNewline(char) {
-                        atStart = true
-                        parsingField = false
-                        innerQuotes = false
-                        callBlock()
-                    } else {
-                        field.append(char)
-                    }
-                }
-            } else if parsingQuotes {
-                if innerQuotes {
-                    if char == "\"" {
-                        field.append(char)
-                        innerQuotes = false
-                    } else if char == self.delimiter {
-                        atStart = true
-                        parsingField = false
-                        innerQuotes = false
-                        fields.append(String(field))
-                        field = [Character]()
-                    } else if CSV.isNewline(char) {
-                        atStart = true
-                        parsingQuotes = false
-                        innerQuotes = false
-                        callBlock()
-                    } else {
-                        fatalError("Can't have non-quote here: \(char)")
-                    }
-                } else {
-                    if char == "\"" {
-                        innerQuotes = true
-                    } else {
-                        field.append(char)
-                    }
-                }
-            } else {
-                fatalError("me_irl")
-            }
-            return doLimit && count >= limitTo!
-        }
+        let accumulate = Accumulator(block: block, startAt: startAt)
         
         while currentIndex < endIndex {
-            let char = text[currentIndex]
-            if changeState(char) {
+            state = state.nextState(accumulate, char: text[currentIndex])
+            if doLimit && accumulate.count >= limitTo! {
                 break
             }
             currentIndex = currentIndex.successor()
         }
-        
-        if fields.count != 0 || field.count != 0 || (doLimit && count < limitTo!) {
-            fields.append(String(field))
-            block(fields)
+        if !isNewline(text[currentIndex.predecessor()]) || (doLimit && accumulate.count < limitTo!) {
+            state.nextState(accumulate, char: "\n")
         }
     }
+}
+
+class Accumulator {
+    var field: [Character]
+    var fields: [String]
     
-    private static func isNewline(char: Character) -> Bool {
-        return char == "\n" || char == "\r\n"
+    let block: ([String]) -> ()
+    var count = 0
+    let startAt: Int
+    
+    init(block: ([String]) -> (), startAt: Int = 0) {
+        self.block = block
+        field = []
+        fields = []
+        self.startAt = startAt
+    }
+    
+    func pushCharacter(char: Character) {
+        field.append(char)
+    }
+    func pushField() {
+        fields.append(String(field))
+        field = []
+    }
+    func pushRow() {
+        fields.append(String(field))
+        if count >= startAt {
+            block(fields)
+        }
+        count += 1
+        fields = [String]()
+        field = [Character]()
     }
 }
+
+enum State {
+    case Start // start of line or field
+    case ParsingField // inside a field with no quotes
+    case ParsingFieldInnerQuotes // escaped quotes in a field
+    case ParsingQuotes // field with quotes
+    case ParsingQuotesInner // escaped quotes in a quoted field
+    case Error(String) // error or something
+    
+    func nextState(hook: Accumulator, char: Character) -> State {
+        switch self {
+        case Start:
+            return stateFromStart(hook, char)
+        case .ParsingField:
+            return stateFromParsingField(hook, char)
+        case .ParsingFieldInnerQuotes:
+            return stateFromParsingFieldInnerQuotes(hook, char)
+        case .ParsingQuotes:
+            return stateFromParsingQuotes(hook, char)
+        case .ParsingQuotesInner:
+            return stateFromParsingQuotesInner(hook, char)
+        default:
+            return .Error("Unexpected character: \(char)")
+        }
+    }
+}
+
+
+private func stateFromStart(hook: Accumulator, _ char: Character) -> State {
+    if char == "\"" {
+        return .ParsingQuotes
+    } else if char == "," {//self.delimiter {
+        hook.pushField()
+        return .Start
+    } else if isNewline(char) {
+        hook.pushRow()
+        return .Start
+    } else {
+        hook.pushCharacter(char)
+        return .ParsingField
+    }
+}
+
+private func stateFromParsingField(hook: Accumulator, _ char: Character) -> State {
+    if char == "\"" {
+        return .ParsingFieldInnerQuotes
+    } else if char == "," {//self.delimiter {
+        hook.pushField()
+        return .Start
+    } else if isNewline(char) {
+        hook.pushRow()
+        return .Start
+    } else {
+        hook.pushCharacter(char)
+        return .ParsingField
+    }
+}
+
+private func stateFromParsingFieldInnerQuotes(hook: Accumulator, _ char: Character) -> State {
+    if char == "\"" {
+        hook.pushCharacter(char)
+        return .ParsingField
+    } else {
+        return .Error("Can't have non-quote here: \(char)")
+    }
+}
+
+private func stateFromParsingQuotes(hook: Accumulator, _ char: Character) -> State {
+    if char == "\"" {
+        return .ParsingQuotesInner
+    } else {
+        hook.pushCharacter(char)
+        return .ParsingQuotes
+    }
+}
+
+private func stateFromParsingQuotesInner(hook: Accumulator, _ char: Character) -> State {
+    if char == "\"" {
+        hook.pushCharacter(char)
+        return .ParsingQuotes
+    } else if char == "," {// self.delimiter {
+        hook.pushField()
+        return .Start
+    } else if isNewline(char) {
+        hook.pushRow()
+        return .Start
+    } else {
+        return .Error("Can't have non-quote here: \(char)")
+    }
+}
+
+private func isNewline(char: Character) -> Bool {
+    return char == "\n" || char == "\r\n"
+}
+
+
+
+
+
+
+
+
+
