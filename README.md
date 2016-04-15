@@ -1,18 +1,17 @@
-# SwiftCSV
+# SwifterCSV
 
 _Simple CSV parsing, for OSX and iOS._
 
-This is a fork of [SwiftCSV by naoty](https://github.com/naoty/SwiftCSV). The main changes are:
-
-+ Support for quotes and escaped characters
-+ Better performance
-+ Delimiters use `Character`, not `NSCharacterSet`
++ Efficient state-machine based design
++ Rows can be used as they are parsed to reduce memory overhead
++ Compliant with the [CSV specification](http://tools.ietf.org/html/rfc4180#section-2)
 
 ## Usage
 
 CSV content can be loaded using the `CSV` class:
 
 ```swift
+import SwifterCSV
 // As a string
 let csv = CSV(string: "id,name,age\n1,Alice,18")
 // With a custom delimiter character
@@ -34,8 +33,6 @@ do {
 If you don't care about the columns, you can set the `loadColumns` argument to `false` and the columns Dictionary will not be populated.
 
 ### Reading Data
-
-Works just like the original:
 
 ```swift
 let csv = CSV(string: "id,name,age\n1,Alice,18\n2,Bob,19")
@@ -59,14 +56,12 @@ csv.enumerateAsDict { dict in
 
 ## Installation
 
-### CocoaPods
+Not on CocoaPods yet - clone the repo and use it as a local Pod:
 
 ```ruby
-pod "SwiftCSV"
+pod 'SwifterCSV', path: 'path/to/SwifterCSV'
 ```
 
-### Carthage
+## About
 
-```
-github "naoty/SwiftCSV"
-```
+This is a fork of [SwiftCSV by naoty](https://github.com/naoty/SwiftCSV). I wanted better performance and full support for the CSV spec, so here we are.
