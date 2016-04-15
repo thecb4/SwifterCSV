@@ -1,9 +1,9 @@
 //
 //  QuotedTests.swift
-//  SwiftCSV
+//  SwifterCSV
 //
 //  Created by Will Richardson on 7/04/16.
-//  Copyright © 2016 Naoto Kaneko. All rights reserved.
+//  Copyright © 2016 JavaNut13. All rights reserved.
 //
 
 import XCTest

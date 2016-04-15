@@ -1,9 +1,9 @@
 //
 //  String+Lines.swift
-//  SwiftCSV
+//  SwifterCSV
 //
 //  Created by Naoto Kaneko on 2/24/16.
-//  Copyright © 2016 Naoto Kaneko. All rights reserved.
+//  Copyright © 2016 Naoto Kaneko, JavaNut13. All rights reserved.
 //
 
 extension String {

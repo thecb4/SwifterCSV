@@ -1,6 +1,6 @@
 //
 //  TSVTests.swift
-//  SwiftCSV
+//  SwifterCSV
 //
 //  Created by naoty on 2014/06/15.
 //  Copyright (c) 2014年 Naoto Kaneko. All rights reserved.

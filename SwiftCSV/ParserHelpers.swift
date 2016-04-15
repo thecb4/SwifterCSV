@@ -1,6 +1,6 @@
 //
 //  Parser.swift
-//  SwiftCSV
+//  SwifterCSV
 //
 //  Created by Will Richardson on 11/04/16.
 //  Copyright © 2016 JavaNut13. All rights reserved.
