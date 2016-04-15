@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D1E59B31945FFAC001CF760"
-               BuildableName = "SwiftCSV.framework"
-               BlueprintName = "SwiftCSV"
-               ReferencedContainer = "container:SwiftCSV.xcodeproj">
+               BuildableName = "SwifterCSV.framework"
+               BlueprintName = "SwifterCSV"
+               ReferencedContainer = "container:SwifterCSV.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D1E59BE1945FFAD001CF760"
-               BuildableName = "SwiftCSVTests.xctest"
-               BlueprintName = "SwiftCSVTests"
-               ReferencedContainer = "container:SwiftCSV.xcodeproj">
+               BuildableName = "SwifterCSV.xctest"
+               BlueprintName = "SwifterCSVTests"
+               ReferencedContainer = "container:SwifterCSV.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D1E59BE1945FFAD001CF760"
-               BuildableName = "SwiftCSVTests.xctest"
-               BlueprintName = "SwiftCSVTests"
-               ReferencedContainer = "container:SwiftCSV.xcodeproj">
+               BuildableName = "SwifterCSV.xctest"
+               BlueprintName = "SwifterCSVTests"
+               ReferencedContainer = "container:SwifterCSV.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D1E59B31945FFAC001CF760"
-            BuildableName = "SwiftCSV.framework"
-            BlueprintName = "SwiftCSV"
-            ReferencedContainer = "container:SwiftCSV.xcodeproj">
+            BuildableName = "SwifterCSV.framework"
+            BlueprintName = "SwifterCSV"
+            ReferencedContainer = "container:SwifterCSV.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D1E59B31945FFAC001CF760"
-            BuildableName = "SwiftCSV.framework"
-            BlueprintName = "SwiftCSV"
-            ReferencedContainer = "container:SwiftCSV.xcodeproj">
+            BuildableName = "SwifterCSV.framework"
+            BlueprintName = "SwifterCSV"
+            ReferencedContainer = "container:SwifterCSV.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -97,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D1E59B31945FFAC001CF760"
-            BuildableName = "SwiftCSV.framework"
-            BlueprintName = "SwiftCSV"
-            ReferencedContainer = "container:SwiftCSV.xcodeproj">
+            BuildableName = "SwifterCSV.framework"
+            BlueprintName = "SwifterCSV"
+            ReferencedContainer = "container:SwifterCSV.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

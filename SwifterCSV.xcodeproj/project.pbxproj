@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1E59C01945FFAD001CF760 /* SwiftCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1E59B41945FFAC001CF760 /* SwiftCSV.framework */; };
+		3D1E59C01945FFAD001CF760 /* SwifterCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1E59B41945FFAC001CF760 /* SwifterCSV.framework */; };
 		3D1E59C71945FFAD001CF760 /* CSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1E59C61945FFAD001CF760 /* CSVTests.swift */; };
 		3D3749E3194D6DF7008F262A /* TSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3749E2194D6DF7008F262A /* TSVTests.swift */; };
 		3D444BCD1C7D88290001C60C /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D444BCC1C7D88290001C60C /* String+Lines.swift */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D1E59B41945FFAC001CF760 /* SwiftCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCSV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D1E59BF1945FFAD001CF760 /* SwiftCSVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCSVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1E59B41945FFAC001CF760 /* SwifterCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwifterCSV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1E59BF1945FFAD001CF760 /* SwifterCSV.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwifterCSV.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1E59C61945FFAD001CF760 /* CSVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTests.swift; sourceTree = "<group>"; };
 		3D3749E2194D6DF7008F262A /* TSVTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSVTests.swift; sourceTree = "<group>"; };
 		3D444BCC1C7D88290001C60C /* String+Lines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1E59C01945FFAD001CF760 /* SwiftCSV.framework in Frameworks */,
+				3D1E59C01945FFAD001CF760 /* SwifterCSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +89,8 @@
 		3D1E59B51945FFAC001CF760 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D1E59B41945FFAC001CF760 /* SwiftCSV.framework */,
-				3D1E59BF1945FFAD001CF760 /* SwiftCSVTests.xctest */,
+				3D1E59B41945FFAC001CF760 /* SwifterCSV.framework */,
+				3D1E59BF1945FFAD001CF760 /* SwifterCSV.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,9 +142,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3D1E59B31945FFAC001CF760 /* SwiftCSV */ = {
+		3D1E59B31945FFAC001CF760 /* SwifterCSV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D1E59CA1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwiftCSV" */;
+			buildConfigurationList = 3D1E59CA1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwifterCSV" */;
 			buildPhases = (
 				3D1E59AF1945FFAC001CF760 /* Sources */,
 				3D1E59B01945FFAC001CF760 /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftCSV;
+			name = SwifterCSV;
 			productName = SwiftCSV;
-			productReference = 3D1E59B41945FFAC001CF760 /* SwiftCSV.framework */;
+			productReference = 3D1E59B41945FFAC001CF760 /* SwifterCSV.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3D1E59BE1945FFAD001CF760 /* SwiftCSVTests */ = {
+		3D1E59BE1945FFAD001CF760 /* SwifterCSVTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D1E59CD1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwiftCSVTests" */;
+			buildConfigurationList = 3D1E59CD1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwifterCSVTests" */;
 			buildPhases = (
 				3D1E59BB1945FFAD001CF760 /* Sources */,
 				3D1E59BC1945FFAD001CF760 /* Frameworks */,
@@ -174,9 +174,9 @@
 				3D1E59C21945FFAD001CF760 /* PBXTargetDependency */,
 				3D1E59D519460259001CF760 /* PBXTargetDependency */,
 			);
-			name = SwiftCSVTests;
+			name = SwifterCSVTests;
 			productName = SwiftCSVTests;
-			productReference = 3D1E59BF1945FFAD001CF760 /* SwiftCSVTests.xctest */;
+			productReference = 3D1E59BF1945FFAD001CF760 /* SwifterCSV.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D1E59AE1945FFAC001CF760 /* Build configuration list for PBXProject "SwiftCSV" */;
+			buildConfigurationList = 3D1E59AE1945FFAC001CF760 /* Build configuration list for PBXProject "SwifterCSV" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -211,8 +211,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D1E59B31945FFAC001CF760 /* SwiftCSV */,
-				3D1E59BE1945FFAD001CF760 /* SwiftCSVTests */,
+				3D1E59B31945FFAC001CF760 /* SwifterCSV */,
+				3D1E59BE1945FFAD001CF760 /* SwifterCSVTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,12 +266,12 @@
 /* Begin PBXTargetDependency section */
 		3D1E59C21945FFAD001CF760 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D1E59B31945FFAC001CF760 /* SwiftCSV */;
+			target = 3D1E59B31945FFAC001CF760 /* SwifterCSV */;
 			targetProxy = 3D1E59C11945FFAD001CF760 /* PBXContainerItemProxy */;
 		};
 		3D1E59D519460259001CF760 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D1E59B31945FFAC001CF760 /* SwiftCSV */;
+			target = 3D1E59B31945FFAC001CF760 /* SwifterCSV */;
 			targetProxy = 3D1E59D419460259001CF760 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -371,11 +371,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SwiftCSV.xcodeproj/SwiftCSV-Info.plist";
+				INFOPLIST_FILE = "SwifterCSV.xcodeproj/SwifterCSV-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwifterCSV;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -389,11 +389,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SwiftCSV.xcodeproj/SwiftCSV-Info.plist";
+				INFOPLIST_FILE = "SwifterCSV.xcodeproj/SwifterCSV-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwifterCSV;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -407,11 +407,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SwiftCSV.xcodeproj/SwiftCSVTests-Info.plist";
+				INFOPLIST_FILE = "SwifterCSV.xcodeproj/SwifterCSVTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwifterCSV;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -421,18 +421,18 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "SwiftCSV.xcodeproj/SwiftCSVTests-Info.plist";
+				INFOPLIST_FILE = "SwifterCSV.xcodeproj/SwifterCSVTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "naoty.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwifterCSV;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D1E59AE1945FFAC001CF760 /* Build configuration list for PBXProject "SwiftCSV" */ = {
+		3D1E59AE1945FFAC001CF760 /* Build configuration list for PBXProject "SwifterCSV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D1E59C81945FFAD001CF760 /* Debug */,
@@ -441,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D1E59CA1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwiftCSV" */ = {
+		3D1E59CA1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwifterCSV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D1E59CB1945FFAD001CF760 /* Debug */,
@@ -450,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D1E59CD1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwiftCSVTests" */ = {
+		3D1E59CD1945FFAD001CF760 /* Build configuration list for PBXNativeTarget "SwifterCSVTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D1E59CE1945FFAD001CF760 /* Debug */,
