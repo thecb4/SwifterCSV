@@ -10,7 +10,6 @@
 		3D1E59C01945FFAD001CF760 /* SwifterCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1E59B41945FFAC001CF760 /* SwifterCSV.framework */; };
 		3D1E59C71945FFAD001CF760 /* CSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1E59C61945FFAD001CF760 /* CSVTests.swift */; };
 		3D3749E3194D6DF7008F262A /* TSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3749E2194D6DF7008F262A /* TSVTests.swift */; };
-		3D444BCD1C7D88290001C60C /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D444BCC1C7D88290001C60C /* String+Lines.swift */; };
 		3DAAEE9C1C74C7EC00A933DB /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAEE9B1C74C7EC00A933DB /* CSV.swift */; };
 		BE06B67D1CB7267B009578CC /* empty_fields.csv in Resources */ = {isa = PBXBuildFile; fileRef = BE06B67C1CB7267B009578CC /* empty_fields.csv */; };
 		BE06B6801CB726B5009578CC /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06B67F1CB726B5009578CC /* URLTests.swift */; };
@@ -44,7 +43,6 @@
 		3D1E59BF1945FFAD001CF760 /* SwifterCSV.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwifterCSV.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1E59C61945FFAD001CF760 /* CSVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTests.swift; sourceTree = "<group>"; };
 		3D3749E2194D6DF7008F262A /* TSVTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSVTests.swift; sourceTree = "<group>"; };
-		3D444BCC1C7D88290001C60C /* String+Lines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
 		3DAAEE9B1C74C7EC00A933DB /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; tabWidth = 4; };
 		BE06B67C1CB7267B009578CC /* empty_fields.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty_fields.csv; sourceTree = "<group>"; };
 		BE06B67F1CB726B5009578CC /* URLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				3DAAEE9B1C74C7EC00A933DB /* CSV.swift */,
-				3D444BCC1C7D88290001C60C /* String+Lines.swift */,
 				BEE5461B1CBBB0F400C0666F /* ParserHelpers.swift */,
 				BEE5461D1CBBB15900C0666F /* Description.swift */,
 				BE9B02D71CBE57B8009FE424 /* Parser.swift */,
@@ -246,7 +243,6 @@
 				BEB2916D1CC0D12D0093365E /* StateMachine.swift in Sources */,
 				3DAAEE9C1C74C7EC00A933DB /* CSV.swift in Sources */,
 				BE9B02D81CBE57B8009FE424 /* Parser.swift in Sources */,
-				3D444BCD1C7D88290001C60C /* String+Lines.swift in Sources */,
 				BEE5461C1CBBB0F400C0666F /* ParserHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
