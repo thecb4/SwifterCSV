@@ -17,6 +17,7 @@
 		BE06B6821CB7287F009578CC /* quotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = BE06B6811CB7287F009578CC /* quotes.csv */; };
 		BE6C86071CB5CE44009A351D /* QuotedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6C86061CB5CE44009A351D /* QuotedTests.swift */; };
 		BE9B02D81CBE57B8009FE424 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9B02D71CBE57B8009FE424 /* Parser.swift */; };
+		BEB2916D1CC0D12D0093365E /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB2916C1CC0D12D0093365E /* StateMachine.swift */; };
 		BEE5461C1CBBB0F400C0666F /* ParserHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE5461B1CBBB0F400C0666F /* ParserHelpers.swift */; };
 		BEE5461E1CBBB15900C0666F /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE5461D1CBBB15900C0666F /* Description.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		BE06B6811CB7287F009578CC /* quotes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quotes.csv; sourceTree = "<group>"; };
 		BE6C86061CB5CE44009A351D /* QuotedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotedTests.swift; sourceTree = "<group>"; };
 		BE9B02D71CBE57B8009FE424 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		BEB2916C1CC0D12D0093365E /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
 		BEE5461B1CBBB0F400C0666F /* ParserHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserHelpers.swift; sourceTree = "<group>"; };
 		BEE5461D1CBBB15900C0666F /* Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				BEE5461B1CBBB0F400C0666F /* ParserHelpers.swift */,
 				BEE5461D1CBBB15900C0666F /* Description.swift */,
 				BE9B02D71CBE57B8009FE424 /* Parser.swift */,
+				BEB2916C1CC0D12D0093365E /* StateMachine.swift */,
 			);
 			path = SwiftCSV;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE5461E1CBBB15900C0666F /* Description.swift in Sources */,
+				BEB2916D1CC0D12D0093365E /* StateMachine.swift in Sources */,
 				3DAAEE9C1C74C7EC00A933DB /* CSV.swift in Sources */,
 				BE9B02D81CBE57B8009FE424 /* Parser.swift in Sources */,
 				3D444BCD1C7D88290001C60C /* String+Lines.swift in Sources */,
