@@ -6,8 +6,6 @@
 //  Copyright © 2016 JavaNut13. All rights reserved.
 //
 
-import Foundation
-
 extension CSV: CustomStringConvertible {
     public var description: String {
         let head = header.joinWithSeparator(",") + "\n"
