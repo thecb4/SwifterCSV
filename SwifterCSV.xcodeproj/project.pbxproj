@@ -26,6 +26,9 @@
 		BEBED9321CC37C70003DB025 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9AA19E1CC3562900128142 /* Parser.swift */; };
 		BEBED9331CC37C70003DB025 /* ParserHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9AA19F1CC3562900128142 /* ParserHelpers.swift */; };
 		BEBED9341CC37C70003DB025 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9AA1A01CC3562900128142 /* StateMachine.swift */; };
+		BEBED9361CC37DCD003DB025 /* Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBED9351CC37DCD003DB025 /* Import.swift */; };
+		BEBED9391CC37DD7003DB025 /* ImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBED9371CC37DD4003DB025 /* ImportTests.swift */; };
+		BEBED93A1CC37DDA003DB025 /* Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBED9351CC37DCD003DB025 /* Import.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,8 @@
 		BE9AA1AA1CC3563D00128142 /* quotes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = quotes.csv; path = SwifterCSVTests/quotes.csv; sourceTree = SOURCE_ROOT; };
 		BE9AA1AB1CC3563D00128142 /* TSVTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TSVTests.swift; path = SwifterCSVTests/TSVTests.swift; sourceTree = SOURCE_ROOT; };
 		BE9AA1AC1CC3563D00128142 /* URLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLTests.swift; path = SwifterCSVTests/URLTests.swift; sourceTree = SOURCE_ROOT; };
+		BEBED9351CC37DCD003DB025 /* Import.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Import.swift; path = SwifterCSVTests/Import.swift; sourceTree = SOURCE_ROOT; };
+		BEBED9371CC37DD4003DB025 /* ImportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImportTests.swift; path = SwifterCSVTests/ImportTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 				BE9AA19B1CC3562900128142 /* CSV.swift */,
 				BE9AA19C1CC3562900128142 /* CSVWithFoundation.swift */,
 				BE9AA19D1CC3562900128142 /* Description.swift */,
+				BEBED9351CC37DCD003DB025 /* Import.swift */,
 				BE9AA19E1CC3562900128142 /* Parser.swift */,
 				BE9AA19F1CC3562900128142 /* ParserHelpers.swift */,
 				BE9AA1A01CC3562900128142 /* StateMachine.swift */,
@@ -118,6 +124,7 @@
 		3D1E59C31945FFAD001CF760 /* SwifterCSVTests */ = {
 			isa = PBXGroup;
 			children = (
+				BEBED9371CC37DD4003DB025 /* ImportTests.swift */,
 				BE9AA1A71CC3563D00128142 /* CSVTests.swift */,
 				BE9AA1A91CC3563D00128142 /* QuotedTests.swift */,
 				BE9AA1AB1CC3563D00128142 /* TSVTests.swift */,
@@ -249,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBED9361CC37DCD003DB025 /* Import.swift in Sources */,
 				BE9AA1A21CC3562900128142 /* CSVWithFoundation.swift in Sources */,
 				BE9AA1A41CC3562900128142 /* Parser.swift in Sources */,
 				BE9AA1A51CC3562900128142 /* ParserHelpers.swift in Sources */,
@@ -262,11 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBED9391CC37DD7003DB025 /* ImportTests.swift in Sources */,
 				BEBED9331CC37C70003DB025 /* ParserHelpers.swift in Sources */,
 				BE9AA1B31CC3566600128142 /* CSVTests.swift in Sources */,
 				BE9AA1B51CC3566D00128142 /* TSVTests.swift in Sources */,
 				BEBED9341CC37C70003DB025 /* StateMachine.swift in Sources */,
 				BEBED92F1CC37C70003DB025 /* CSV.swift in Sources */,
+				BEBED93A1CC37DDA003DB025 /* Import.swift in Sources */,
 				BEBED9311CC37C70003DB025 /* Description.swift in Sources */,
 				BEBED9321CC37C70003DB025 /* Parser.swift in Sources */,
 				BE9AA1B41CC3566A00128142 /* QuotedTests.swift in Sources */,

@@ -10,8 +10,9 @@ extension CSV: CustomStringConvertible {
     public var description: String {
         let head = header.joinWithSeparator(",") + "\n"
         
+        let delim = String(self.delimiter)
         let cont = rows.map { row in
-            header.map { row[$0]! }.joinWithSeparator(",")
+            header.map { row[$0] ?? "" }.joinWithSeparator(delim)
         }.joinWithSeparator("\n")
         return head + cont
     }
