@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftCSV
 
 class QuotedTests: XCTestCase {
     var csv: CSV!

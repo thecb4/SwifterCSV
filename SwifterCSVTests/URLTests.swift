@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftCSV
 
 class URLTests: XCTestCase {
     var csv: CSV!

@@ -7,8 +7,6 @@
 //
 
 import XCTest
-import Foundation
-@testable import SwiftCSV
 
 class TSVTests: XCTestCase {
     var tsv: CSV!
