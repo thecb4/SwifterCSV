@@ -32,7 +32,7 @@ extension CSV {
         var rows = [[String: String]]()
         // Create a list of headers from all the rows
         for (key, values) in cols {
-            for (index, val) in values.enumerate() {
+            for (index, val) in values.enumerated() {
                 if rows.count <= index {
                     rows.append([key: val])
                 } else {

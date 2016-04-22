@@ -8,12 +8,12 @@
 
 extension CSV: CustomStringConvertible {
     public var description: String {
-        let head = header.joinWithSeparator(",") + "\n"
+        let head = header.joined(separator: ",") + "\n"
         
         let delim = String(self.delimiter)
         let cont = rows.map { row in
-            header.map { row[$0] ?? "" }.joinWithSeparator(delim)
-        }.joinWithSeparator("\n")
+            header.map { row[$0] ?? "" }.joined(separator: delim)
+        }.joined(separator: "\n")
         return head + cont
     }
 }

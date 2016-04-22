@@ -37,7 +37,7 @@ extension CSV {
     
     /// Turn the CSV data into NSData using a given encoding
     public func dataUsingEncoding(encoding: NSStringEncoding) -> NSData? {
-        return description.dataUsingEncoding(encoding)
+        return description.data(usingEncoding: encoding, allowLossyConversion: false)
     }
 }
 #endif
