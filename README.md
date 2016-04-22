@@ -2,6 +2,8 @@
 
 _Simple CSV parsing, for OSX and iOS._
 
+[![Build Status](https://travis-ci.org/JavaNut13/SwifterCSV.svg?branch=master)](https://travis-ci.org/JavaNut13/SwifterCSV)
+
 + Efficient state-machine based design
 + Rows can be used as they are parsed to reduce memory overhead
 + Compliant with the [CSV specification](http://tools.ietf.org/html/rfc4180#section-2)
