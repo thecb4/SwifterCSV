@@ -14,7 +14,6 @@ class ImportTests: XCTestCase {
         let rows = [
             ["thing": "window", "size": "large"],
             ["thing": "laptop", "size": "small"]
-            
         ]
         let csv = CSV(rows: rows)
         XCTAssertEqual(csv.rows, rows)

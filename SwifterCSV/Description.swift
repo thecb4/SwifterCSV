@@ -8,12 +8,21 @@
 
 extension CSV: CustomStringConvertible {
     public var description: String {
-        let head = header.joinWithSeparator(",") + "\n"
-        
         let delim = String(self.delimiter)
+        let head = header.joinWithSeparator(delim) + "\n"
+        
         let cont = rows.map { row in
-            header.map { row[$0] ?? "" }.joinWithSeparator(delim)
+            header.map { escape(delim, field: row[$0] ?? "") }.joinWithSeparator(delim)
         }.joinWithSeparator("\n")
         return head + cont
+    }
+}
+
+private func escape(delimiter: String, field: String) -> String {
+    let quoted = field.stringByReplacingOccurrencesOfString("\"", withString: "\"\"")
+    if field.containsString(delimiter) {
+        return "\"\(quoted)\""
+    } else {
+        return quoted
     }
 }
