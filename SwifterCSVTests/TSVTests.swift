@@ -26,12 +26,4 @@ class TSVTests: XCTestCase {
             ["id": "3", "name": "Charlie", "age": "20"]
         ])
     }
-    
-    func testInit_makesColumns() {
-        XCTAssertEqual(tsv.columns, [
-            "id": ["1", "2", "3"],
-            "name": ["Alice", "Bob", "Charlie"],
-            "age": ["18", "19", "20"]
-        ])
-    }
 }

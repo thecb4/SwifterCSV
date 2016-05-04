@@ -20,17 +20,6 @@ class ImportTests: XCTestCase {
         let desc = "size,thing\nlarge,window\nsmall,laptop"
         XCTAssertEqual(csv.description, desc)
     }
-
-    func testImportFromColumns() {
-        let cols = [
-            "thing": ["window", "laptop"],
-            "size": ["large", "small"]
-        ]
-        let csv = CSV(columns: cols)
-//        XCTAssertEqual(csv.columns, cols)
-        let desc = "size,thing\nlarge,window\nsmall,laptop"
-        XCTAssertEqual(csv.description, desc)
-    }
     
     func testImportFromArray() {
         let header = ["Thing", "Stuff", "More things"]

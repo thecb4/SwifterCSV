@@ -15,17 +15,6 @@ extension CSV {
         return _rows!
     }
     
-    /// Dictionary of header name to list of values in that column
-    /// Will not be loaded if loadColumns in init is false
-    public var columns: [String: [String]] {
-        if !loadColumns {
-            return [:]
-        } else if _columns == nil {
-            parse()
-        }
-        return _columns!
-    }
-    
     /// Parse the file and call a block for each row, passing it as a dictionary
     public func enumerateAsDict(block: [String: String] -> ()) {
         let enumeratedHeader = header.enumerate()
@@ -46,23 +35,10 @@ extension CSV {
     
     private func parse() {
         var rows = [[String: String]]()
-        var columns = [String: [String]]()
-        
-        if loadColumns {
-            for field in header {
-                columns[field] = []
-            }
-        }
         
         enumerateAsDict { dict in
             rows.append(dict)
-            if self.loadColumns {
-                for key in self.header {
-                    columns[key]?.append(dict[key] ?? "")
-                }
-            }
         }
-        _columns = columns
         _rows = rows
     }
 }
