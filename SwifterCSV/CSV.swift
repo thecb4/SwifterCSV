@@ -60,4 +60,12 @@ public class CSV {
         
         load(columns: columns)
     }
+    
+    public init(header: [String], rows: [[String]], delimiter: Character = comma) {
+        self.text = ""
+        self.delimiter = delimiter
+        self.loadColumns = false
+        
+        load(header: header, rows: rows)
+    }
 }

@@ -43,4 +43,17 @@ extension CSV {
         self._columns = cols
         self._rows = rows
     }
+    
+    func load(header header: [String], rows: [[String]]) {
+        self.header = header
+        var rowsDict = [[String: String]]()
+        for row in rows {
+            var rowDict = [String: String]()
+            for (idx, head) in header.enumerate() {
+                rowDict[head] = idx < row.count ? row[idx] : ""
+            }
+            rowsDict.append(rowDict)
+        }
+        self._rows = rowsDict
+    }
 }
