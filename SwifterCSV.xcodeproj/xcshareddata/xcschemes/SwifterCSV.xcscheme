@@ -5,10 +5,10 @@
       <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
         <BuildableReference
           BuildableIdentifier = "primary"
-          BlueprintIdentifier = "______Target_CSV"
-          BuildableName = "libCSV.dylib"
-          BlueprintName = "CSV"
-          ReferencedContainer = "container:CSV.xcodeproj">
+          BlueprintIdentifier = "______Target_SwifterCSV"
+          BuildableName = "libSwifterCSV.dylib"
+          BlueprintName = "SwifterCSV"
+          ReferencedContainer = "container:SwifterCSV.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
     </BuildActionEntries>
@@ -23,10 +23,10 @@
       skipped = "NO">
       <BuildableReference
         BuildableIdentifier = "primary"
-        BlueprintIdentifier = "______Target_csvTestSuite"
-        BuildableName = "csvTestSuite.xctest"
-        BlueprintName = "csvTestSuite"
-        ReferencedContainer = "container:CSV.xcodeproj">
+        BlueprintIdentifier = "______Target_SwifterCSVTestSuite"
+        BuildableName = "SwifterCSVTestSuite.xctest"
+        BlueprintName = "SwifterCSVTestSuite"
+        ReferencedContainer = "container:SwifterCSV.xcodeproj">
       </BuildableReference>
     </TestableReference>
     </Testables>

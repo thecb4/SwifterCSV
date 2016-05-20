@@ -1,5 +1,5 @@
 import XCTest
-@testable import CSV
+@testable import SwifterCSV
 
 //
 //  ExportTests.swift
@@ -9,7 +9,7 @@ import XCTest
 //  Copyright © 2016 JavaNut13. All rights reserved.
 //
 
-class CSVTests: XCTestCase {
+class SwifterCSVTests: XCTestCase {
 
 	func testExample() {
 		// This is an example of a functional test case.
@@ -39,8 +39,8 @@ class CSVTests: XCTestCase {
 }
 
 #if os(Linux)
-extension CSVTests {
-	static var allTests : [(String, (CSVTests) -> () throws -> Void)] {
+extension SwifterCSVTests {
+	static var allTests : [(String, (SwifterCSVTests) -> () throws -> Void)] {
 		return [
 			("testExample", testExample),
 			("testDescriptionWithComma", testDescriptionWithComma),
