@@ -1,6 +1,0 @@
-10:20:26.537 Xcode[53983:3087470] Beginning test session 12A37432-2AC0-4925-8AA0-8EB2F35C79BF with Xcode 7D1014 on target <DVTLocalComputer: 0x7fc549d77330 (My Mac | x86_64h)> (10.11.4 (15E65))
-10:20:26.538 Xcode[53983:3087470] Launching with Xcode.DebuggerFoundation.Launcher.LLDB
-10:20:26.538 Xcode[53983:3087470] Initializing test infrastructure.
-10:20:26.538 Xcode[53983:3164282] Waiting for connection to unix domain socket at /tmp/XCTest-JPX.
-10:20:29.792 Xcode[53983:3087470] Test operation failure: Test operation was canceled.
-10:20:29.792 Xcode[53983:3087470] _finishWithError:Error Domain=IDETestOperationsObserverErrorDomain Code=3 "Test operation was canceled." UserInfo={NSLocalizedDescription=Test operation was canceled.} didCancel: 1
