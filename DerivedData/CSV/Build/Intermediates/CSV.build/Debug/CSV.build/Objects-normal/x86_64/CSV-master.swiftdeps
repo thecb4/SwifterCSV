@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.0-dev (LLVM dffa09ffd8, Clang 9f0d189820, Swift 1c720b8f84)"
+options: "272bd9c36d411992226225f033f7e3f4"
+build_time: [517090548, 137162000]
+inputs:
+  "/Users/cavellebenjamin/Documents/Development/portfolio/CSV/Sources/CSV.swift": [517060280, 0]
+  "/Users/cavellebenjamin/Documents/Development/portfolio/CSV/Sources/CSVWithFoundation.swift": [517062105, 0]
+  "/Users/cavellebenjamin/Documents/Development/portfolio/CSV/Sources/Description.swift": [517062644, 0]
+  "/Users/cavellebenjamin/Documents/Development/portfolio/CSV/Sources/Import.swift": [517060602, 0]
+  "/Users/cavellebenjamin/Documents/Development/portfolio/CSV/Sources/Parser.swift": [517064128, 0]
+  "/Users/cavellebenjamin/Documents/Development/portfolio/CSV/Sources/ParserHelpers.swift": [517060579, 0]
+  "/Users/cavellebenjamin/Documents/Development/portfolio/CSV/Sources/StateMachine.swift": [517002425, 0]

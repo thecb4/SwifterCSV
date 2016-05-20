@@ -1,6 +1,6 @@
 import XCTest
-@testable import csvTestSuite
+@testable import CSVTestSuite
 
 XCTMain([
-	 testCase(csvTests.allTests),
+	 testCase(CSVTests.allTests),
 ])

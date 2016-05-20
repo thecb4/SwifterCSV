@@ -9,7 +9,7 @@ import XCTest
 //  Copyright © 2016 JavaNut13. All rights reserved.
 //
 
-class csvTests: XCTestCase {
+class CSVTests: XCTestCase {
 
 	func testExample() {
 		// This is an example of a functional test case.
@@ -38,14 +38,14 @@ class csvTests: XCTestCase {
 
 }
 
-//#if os(Linux)
-//extension csvTests {
-//	static var allTests : [(String, (csvTests) -> () throws -> Void)] {
-//		return [
-//			("testExample", testExample),
-//			("testDescriptionWithComma", testDescriptionWithComma),
-//			("testDescriptionWithComma", testDescriptionWithComma )
-//		]
-//	}
-//}
-//#endif
+#if os(Linux)
+extension CSVTests {
+	static var allTests : [(String, (CSVTests) -> () throws -> Void)] {
+		return [
+			("testExample", testExample),
+			("testDescriptionWithComma", testDescriptionWithComma),
+			("testDescriptionWithComma", testDescriptionWithComma )
+		]
+	}
+}
+#endif
