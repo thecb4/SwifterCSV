@@ -6,7 +6,7 @@ compiler:
   - clang
 
 os:
-  - linux
+#  - linux
   - osx
 
 osx_image: xcode7.3
