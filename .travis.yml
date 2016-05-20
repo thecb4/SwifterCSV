@@ -39,5 +39,7 @@ install:
     fi
 
 script:
+  - swift --version
+  - swift build --version
   - swift build
   - swift test
