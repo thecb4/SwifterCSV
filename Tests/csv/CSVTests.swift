@@ -37,12 +37,15 @@ class csvTests: XCTestCase {
 	}
 
 }
-extension csvTests {
-	static var allTests : [(String, csvTests -> () throws -> Void)] {
-		return [
-			("testExample", testExample),
-			("testDescriptionWithComma", testDescriptionWithComma),
-			("testDescriptionWithComma", testDescriptionWithComma )
-		]
-	}
-}
+
+//#if os(Linux)
+//extension csvTests {
+//	static var allTests : [(String, (csvTests) -> () throws -> Void)] {
+//		return [
+//			("testExample", testExample),
+//			("testDescriptionWithComma", testDescriptionWithComma),
+//			("testDescriptionWithComma", testDescriptionWithComma )
+//		]
+//	}
+//}
+//#endif
