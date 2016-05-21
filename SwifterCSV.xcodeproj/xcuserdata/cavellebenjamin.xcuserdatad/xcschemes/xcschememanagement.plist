@@ -2,8 +2,56 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SwifterCSV-OSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SwifterCSV-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>SwifterCSV-tvOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SwifterCSV.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>E97637241CEFB25D002BE4D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E976372D1CEFB25D002BE4D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E97637401CEFB286002BE4D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E976374D1CEFB31F002BE4D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E97637561CEFB31F002BE4D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_SwifterCSV</key>
 		<dict>
 			<key>primary</key>
