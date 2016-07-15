@@ -40,7 +40,7 @@ public class CSV {
         self.text = ""
         self.delimiter = delimiter
 
-        load(rows: rows)
+        load(rows)
     }
 
     /// Load data from a header array and 2D rows array
@@ -52,6 +52,6 @@ public class CSV {
         self.text = ""
         self.delimiter = delimiter
 
-        load(header: header, rows: rows)
+        load(header, rows: rows)
     }
 }

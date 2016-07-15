@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E97637241CEFB25D002BE4D1"
-               BuildableName = "SwifterCSV-iOS.framework"
+               BuildableName = "SwifterCSV.framework"
                BlueprintName = "SwifterCSV-iOS"
                ReferencedContainer = "container:SwifterCSV.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E97637241CEFB25D002BE4D1"
-            BuildableName = "SwifterCSV-iOS.framework"
+            BuildableName = "SwifterCSV.framework"
             BlueprintName = "SwifterCSV-iOS"
             ReferencedContainer = "container:SwifterCSV.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E97637241CEFB25D002BE4D1"
-            BuildableName = "SwifterCSV-iOS.framework"
+            BuildableName = "SwifterCSV.framework"
             BlueprintName = "SwifterCSV-iOS"
             ReferencedContainer = "container:SwifterCSV.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E97637241CEFB25D002BE4D1"
-            BuildableName = "SwifterCSV-iOS.framework"
+            BuildableName = "SwifterCSV.framework"
             BlueprintName = "SwifterCSV-iOS"
             ReferencedContainer = "container:SwifterCSV.xcodeproj">
          </BuildableReference>

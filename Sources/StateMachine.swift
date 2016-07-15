@@ -47,27 +47,27 @@ class Accumulator {
 }
 
 enum State {
-    case Start // start of line or field
-    case ParsingField // inside a field with no quotes
-    case ParsingFieldInnerQuotes // escaped quotes in a field
-    case ParsingQuotes // field with quotes
-    case ParsingQuotesInner // escaped quotes in a quoted field
-    case Error(String) // error or something
+    case start // start of line or field
+    case parsingField // inside a field with no quotes
+    case parsingFieldInnerQuotes // escaped quotes in a field
+    case parsingQuotes // field with quotes
+    case parsingQuotesInner // escaped quotes in a quoted field
+    case error(String) // error or something
 
     func nextState(_ hook: Accumulator, char: Character) -> State {
         switch self {
-        case Start:
+        case start:
             return stateFromStart(hook, char)
-        case .ParsingField:
+        case .parsingField:
             return stateFromParsingField(hook, char)
-        case .ParsingFieldInnerQuotes:
+        case .parsingFieldInnerQuotes:
             return stateFromParsingFieldInnerQuotes(hook, char)
-        case .ParsingQuotes:
+        case .parsingQuotes:
             return stateFromParsingQuotes(hook, char)
-        case .ParsingQuotesInner:
+        case .parsingQuotesInner:
             return stateFromParsingQuotesInner(hook, char)
         default:
-            return .Error("Unexpected character: \(char)")
+            return .error("Unexpected character: \(char)")
         }
     }
 }
@@ -75,64 +75,64 @@ enum State {
 
 private func stateFromStart(_ hook: Accumulator, _ char: Character) -> State {
     if char == "\"" {
-        return .ParsingQuotes
+        return .parsingQuotes
     } else if char == hook.delimiter {
         hook.pushField()
-        return .Start
+        return .start
     } else if isNewline(char) {
         hook.pushRow()
-        return .Start
+        return .start
     } else {
         hook.pushCharacter(char)
-        return .ParsingField
+        return .parsingField
     }
 }
 
 private func stateFromParsingField(_ hook: Accumulator, _ char: Character) -> State {
     if char == "\"" {
-        return .ParsingFieldInnerQuotes
+        return .parsingFieldInnerQuotes
     } else if char == hook.delimiter {
         hook.pushField()
-        return .Start
+        return .start
     } else if isNewline(char) {
         hook.pushRow()
-        return .Start
+        return .start
     } else {
         hook.pushCharacter(char)
-        return .ParsingField
+        return .parsingField
     }
 }
 
 private func stateFromParsingFieldInnerQuotes(_ hook: Accumulator, _ char: Character) -> State {
     if char == "\"" {
         hook.pushCharacter(char)
-        return .ParsingField
+        return .parsingField
     } else {
-        return .Error("Can't have non-quote here: \(char)")
+        return .error("Can't have non-quote here: \(char)")
     }
 }
 
 private func stateFromParsingQuotes(_ hook: Accumulator, _ char: Character) -> State {
     if char == "\"" {
-        return .ParsingQuotesInner
+        return .parsingQuotesInner
     } else {
         hook.pushCharacter(char)
-        return .ParsingQuotes
+        return .parsingQuotes
     }
 }
 
 private func stateFromParsingQuotesInner(_ hook: Accumulator, _ char: Character) -> State {
     if char == "\"" {
         hook.pushCharacter(char)
-        return .ParsingQuotes
+        return .parsingQuotes
     } else if char == hook.delimiter {
         hook.pushField()
-        return .Start
+        return .start
     } else if isNewline(char) {
         hook.pushRow()
-        return .Start
+        return .start
     } else {
-        return .Error("Can't have non-quote here: \(char)")
+        return .error("Can't have non-quote here: \(char)")
     }
 }
 

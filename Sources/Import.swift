@@ -7,7 +7,7 @@
 //
 
 extension CSV {
-    func load(rows: [[String: String]]) {
+    func load(_ rows: [[String: String]]) {
         var header: Set<String> = []
         // Create a list of headers from all the rows
         for row in rows {
@@ -19,7 +19,7 @@ extension CSV {
         self._rows = rows
     }
 
-    func load(header: [String], rows: [[String]]) {
+    func load(_ header: [String], rows: [[String]]) {
         self.header = header
         var rowsDict = [[String: String]]()
         for row in rows {

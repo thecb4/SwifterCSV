@@ -13,7 +13,7 @@ extension CSV {
         // var currentIndex = text.startIndex
         // let endIndex = text.endIndex
 
-        var state = State.Start
+        var state = State.start
         let doLimit = limitTo != nil
         let accumulate = Accumulator(block: block, delimiter: delimiter, startAt: startAt)
 
@@ -27,7 +27,7 @@ extension CSV {
             // state = state.nextState(accumulate, char: text[currentIndex])
             state = state.nextState(accumulate, char: character)
             switch state {
-            case .Error(let msg):
+            case .error(let msg):
                 fatalError(msg)
             default:
                 break
