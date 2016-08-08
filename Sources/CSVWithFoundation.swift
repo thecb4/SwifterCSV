@@ -27,8 +27,8 @@ extension CSV {
     /// - url: url pointing to the file (will be passed to String(contentsOfURL:encoding:) to load)
     /// - delimiter: character to split row and header fields by (default is ',')
     /// - encoding: encoding used to read file (default is NSUTF8StringEncoding)
-    public convenience init(url: URL, delimiter: Character = comma, encoding: String.Encoding = String.Encoding.utf8) {
-        let contents = String(contentsOfURL: url, encoding: encoding)
+    public convenience init(url: URL, delimiter: Character = comma, encoding: String.Encoding = String.Encoding.utf8) throws {
+        let contents = try String(contentsOf: url, encoding: encoding)
 
         self.init(string: contents, delimiter: delimiter)
     }
