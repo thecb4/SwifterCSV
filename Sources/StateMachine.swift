@@ -7,20 +7,20 @@
 //
 
 
-class Accumulator {
+open class Accumulator {
     private var field: [Character]
     private var fields: [String]
 
     private let block: ([String]) -> ()
     var count = 0
     private let startAt: Int
-    private let delimiter: Character
+    let delimiter: Character
 
     var hasContent: Bool {
         return field.count > 0 || fields.count > 0
     }
 
-    init(block: ([String]) -> (), delimiter: Character, startAt: Int = 0) {
+    init(block: @escaping ([String]) -> (), delimiter: Character, startAt: Int = 0) {
         self.block = block
         self.startAt = startAt
         self.delimiter = delimiter
@@ -56,7 +56,7 @@ enum State {
 
     func nextState(_ hook: Accumulator, char: Character) -> State {
         switch self {
-        case start:
+        case .start:
             return stateFromStart(hook, char)
         case .parsingField:
             return stateFromParsingField(hook, char)
